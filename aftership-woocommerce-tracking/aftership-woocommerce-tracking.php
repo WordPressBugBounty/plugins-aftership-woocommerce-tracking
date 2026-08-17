@@ -3,7 +3,7 @@
  * Plugin Name: AfterShip Tracking - All-In-One WooCommerce Order Tracking (Free plan available)
  * Plugin URI: http://aftership.com/
  * Description: Track orders in one place. shipment tracking, automated notifications, order lookup, branded tracking page, delivery day prediction
- * Version: 1.18.1
+ * Version: 1.18.2
  * Author: AfterShip
  * Author URI: http://aftership.com
  *
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once( 'woo-includes/woo-functions.php' );
 
-define( 'AFTERSHIP_VERSION', '1.18.1' );
+define( 'AFTERSHIP_VERSION', '1.18.2' );
 define( 'AFTERSHIP_PATH', dirname( __FILE__ ) );
 define( 'AFTERSHIP_ASSETS_URL', plugins_url() . '/' . basename( AFTERSHIP_PATH ) );
 define( 'AFTERSHIP_SCRIPT_TAGS', 'aftership_script_tags' );
@@ -230,11 +230,6 @@ if ( is_woocommerce_active() ) {
 					add_filter( 'woocommerce_subscriptions_renewal_order_meta_query', array( $this->actions, 'woocommerce_subscriptions_renewal_order_meta_query' ), 10, 4 );
 				}
 
-				// Add api key config on user profile.
-				add_action( 'show_user_profile', array( $this->actions, 'add_api_key_field' ) );
-				add_action( 'edit_user_profile', array( $this->actions, 'add_api_key_field' ) );
-				add_action( 'personal_options_update', array( $this->actions, 'generate_api_key' ) );
-				add_action( 'edit_user_profile_update', array( $this->actions, 'generate_api_key' ) );
 				add_action( 'admin_notices', array( $this->actions, 'show_notices' ) );
 
 				// Add support for woocommerce-shipstation

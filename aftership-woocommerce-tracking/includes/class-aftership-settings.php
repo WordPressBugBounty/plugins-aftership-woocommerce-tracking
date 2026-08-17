@@ -231,11 +231,11 @@ class AfterShip_Settings {
 			$couriers = explode( ',', $this->options['couriers'] );
 		}
 		echo '<div class="auto-as-admin-select-title">Courier</div>';
-		echo '<select data-placeholder="Please select couriers" id="' . $this->dom_id_courier_select . '" multiple style="width:100%">';
+		echo '<select data-placeholder="Please select couriers" id="' . esc_attr( $this->dom_id_courier_select ) . '" multiple style="width:100%">';
 		echo '</select>';
-		echo '<input type="hidden" id="' . $this->dom_id_couriers . '" name="aftership_option_name[couriers]" value="' . implode( ',', $couriers ) . '"/>';
+		echo '<input type="hidden" id="' . esc_attr( $this->dom_id_couriers ) . '" name="aftership_option_name[couriers]" value="' . esc_attr( implode( ',', $couriers ) ) . '"/>';
 		if ( isset( $this->options['connected'] ) ) {
-			echo '<input type="hidden" id="' . $this->dom_aftership_connected . '" name="aftership_option_name[connected]" value="' . $this->options['connected'] . '" />';
+			echo '<input type="hidden" id="' . esc_attr( $this->dom_aftership_connected ) . '" name="aftership_option_name[connected]" value="' . esc_attr( $this->options['connected'] ) . '" />';
 		}
 	}
 
@@ -245,7 +245,7 @@ class AfterShip_Settings {
 	public function custom_domain_callback() {
 		printf(
 			'<div class="auto-as-admin-input-title">Display Tracking Information at Custom Domain</div><input type="text" class="auto-as-admin-input-content" id="custom_domain" name="aftership_option_name[custom_domain]" value="%s" style="width:100%%">',
-			isset( $this->options['custom_domain'] ) ? $this->normalize_custom_domain( $this->options['custom_domain'] ) : 'track.aftership.com'
+			esc_attr( isset( $this->options['custom_domain'] ) ? $this->normalize_custom_domain( $this->options['custom_domain'] ) : 'track.aftership.com' )
 		);
 	}
 
@@ -289,9 +289,9 @@ class AfterShip_Settings {
 			$show_orders_actions = explode( ',', $this->options['show_orders_actions'] );
 		}
 		echo '<div class="auto-as-admin-select-title">Add Tracking Order action</div>';
-		echo '<select data-placeholder="Please select order status" id="' . $this->dom_id_show_order_actions_select . '" multiple style="width:100%">';
+		echo '<select data-placeholder="Please select order status" id="' . esc_attr( $this->dom_id_show_order_actions_select ) . '" multiple style="width:100%">';
 		echo '</select>';
-		echo '<input type="hidden" id="' . $this->dom_id_show_order_actions . '" name="aftership_option_name[show_orders_actions]" value="' . implode( ',', $show_orders_actions ) . '"/>';
+		echo '<input type="hidden" id="' . esc_attr( $this->dom_id_show_order_actions ) . '" name="aftership_option_name[show_orders_actions]" value="' . esc_attr( implode( ',', $show_orders_actions ) ) . '"/>';
 	}
 }
 
