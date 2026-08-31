@@ -27,6 +27,9 @@ class AfterShip_API {
 	/** @var WC_API_Server the REST API server */
 	public $server;
 
+	/** @var AfterShip_API_Authentication the API authentication handler */
+	public $authentication;
+
 	/**
 	 * Setup class
 	 *
