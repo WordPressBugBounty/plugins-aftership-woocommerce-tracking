@@ -4,7 +4,7 @@ Donate link: https://www.aftership.com/
 Tags: woocommerce shipping,woocommerce tracking,shipment tracking,order tracking, woocommerce,track order,dhl,ups,usps,fedex,shipping,tracking,order
 Requires at least: 2.9
 Tested up to: 6.8
-Stable tag: 1.18.4
+Stable tag: 1.18.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -131,7 +131,7 @@ Tailor a dynamic branded tracking page. Upload promotional banner, logo, and fav
 
 = Where do I report security bugs found in this plugin? =
 
-Please report security bugs found in the source code of the AfterShip Tracking - All-In-One WooCommerce Order Tracking (Free plan available) plugin through the [Patchstack Vulnerability Disclosure Program](https://patchstack.com/database/vdp/d6f007bc-516e-4e05-a2ab-7f042d78530e). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
+Please report security bugs found in the source code of the AfterShip Tracking - All-In-One WooCommerce Order Tracking (Free plan available) plugin through the [Patchstack Vulnerability Disclosure Program](https://patchstack.com/database/vdp/54ff7891-0a12-4025-b94e-4edcc5a25bbc). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin.
 
 
 == Screenshots ==
@@ -144,6 +144,9 @@ Please report security bugs found in the source code of the AfterShip Tracking -
 6. AfterShip Tracking Admin portal
 
 == Changelog ==
+= 1.18.5 =
+* Update Patchstack vulnerability disclosure link
+
 = 1.18.4 =
 * Add Patchstack vulnerability disclosure FAQ
 
